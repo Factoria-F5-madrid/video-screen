@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video en Loop Pantalla Completa</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background-color: #ff4700; /* Fondo naranja */
+        overflow: hidden;
+      }
+
+      video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: contain; /* Muestra el video completo */
+        z-index: 100;
+        background-color: #ff4700; /* Por si el video tiene transparencias */
+      }
+    </style>
+  </head>
+  <body>
+    <video autoplay muted loop playsinline>
+      <source src="pantalla-verano.mp4" type="video/mp4" />
+      Tu navegador no soporta videos HTML5.
+    </video>
+
+    <!-- Contenido opcional -->
+    <h1 style="color: white; text-align: center; margin-top: 20%">
+      ¡Hola Ana! 😄
+    </h1>
+  </body>
+</html>
